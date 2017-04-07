@@ -19,10 +19,11 @@ function useGeoData(position){
   alert('located!');
   var lon = position.coords.longitude;
   var lat = position.coords.latitude;
-  console.log(lon);
+  alert(lon);
   var apiLocator = "lat=" + lat + "&" + "lon=" + lon;
   $.getJSON(api + apiLocator + key, function (json){
-    console.log(JSON.stringify(json));
+    alert(JSON.stringify(json));
+    alert('SIPHO');
     $location.html(json.name + ", " + json.sys.country);
     $temp.html(json.main.temp);
     $tempMax.html(json.main.temp_max);
