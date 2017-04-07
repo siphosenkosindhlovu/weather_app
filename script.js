@@ -5,7 +5,7 @@ var $location = $('#location'),
     $weatherIcon = $('#weatherIcon'),
     $weatherDesc = $('#weatherDesc'),
     $humid = $('#humid'),
-    $wind = $('#wind');
+    $wind = $('#wind'),
     api = "http://api.openweathermap.org/data/2.5/weather\?",
     key = "&appid=979223e5411815d908c275a992b5c234";
 console.log(api);
