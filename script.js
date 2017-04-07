@@ -10,13 +10,13 @@ var $location = $('#location'),
     key = "&appid=979223e5411815d908c275a992b5c234";
 console.log(api);
 if (navigator.geolocation) {
-  console.log('data');
+  alert('data');
   navigator.geolocation.getCurrentPosition(useGeoData);
 }else{
-  console.log('no data');
+  alert('no data');
 }
 function useGeoData(position){
-  console.log('located!')
+  alert('located!');
   var lon = position.coords.longitude;
   var lat = position.coords.latitude;
   console.log(lon);
@@ -30,6 +30,6 @@ function useGeoData(position){
     $weatherIcon.html("<img src='");
     $weatherDesc.html(json.weather.description);
     $humid.html(json.main.humidity);
-    $wind.html(json.wind.speed + 'metre/sec ' + Math.round(json.wind.deg) + "&deg;" )
+    $wind.html(json.wind.speed + 'm/s ' + Math.round(json.wind.deg) + "&deg;" )
   });
 };
