@@ -1,0 +1,89 @@
+.weather_frame * {
+  box-sizing: border-box;
+}
+.weather_frame{
+  position: absolute;
+  padding: 10px;
+  top: 50%;
+  left:0;
+  right:0;
+  margin: 0 auto;
+  width: 100%;
+  height:280px;
+  background: rgba(255,255,255,0.43);
+  box-shadow: 0px 2px 12px 5px rgba(0,0,0,0.16);
+  transform: translateY(-50%);
+  z-index: 1111;
+  font-family: AvenirNext-Regular;
+  -webkit-backdrop-filter: blur(10px);
+}
+.weather_conditions{
+  width: 50%;
+  float: left;
+  height: 70px;
+  text-align: center;
+}
+.weather_conditions--temp{
+  margin-bottom: 70px;
+}
+#temp{
+  font-size: 50px;
+  clear: both;
+}
+#tempMax{
+  font-size: 24px;
+}
+#tempMin{
+  font-size: 18px;
+}
+.weather_conditions--desc{
+  margin-bottom: 70px;
+  font-size: 16px;
+}
+#weatherIcon img{
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+.weather_conditions--little{
+}
+@media (min-width: 520px){
+  .weather_frame{
+    width: 430px;
+    border-radius: 10px;
+  }
+}
+/* Wind: East , 25km/hr:
+font-family: AvenirNext-Regular;
+font-size: 18px;
+color: #30534F;
+/* Humidity : 2000mb:
+font-family: AvenirNext-Regular;
+font-size: 18px;
+color: #30534F;
+/* Light Showers:
+font-family: AvenirNext-Regular;
+font-size: 16px;
+color: #30534F;
+/* Oval:
+border: 5px solid #0B0B0B;
+/* Rectangle 4:
+border: 6px solid #050505;
+border-radius: 100px;
+/* Harare, ZW:
+font-family: AvenirNext-Regular;
+font-size: 36px;
+color: #30534F;
+/* 23C:
+font-family: AvenirNext-Regular;
+font-size: 24px;
+color: #30534F;
+/* 37 C: *
+font-family: AvenirNext-Regular;
+font-size: 50px;
+color: #30534F;
+/* 23C:
+font-size: 18px;
+color: #30534F;*/
+
+}
