@@ -7,9 +7,11 @@ body{
   position: absolute;
   background: #5ADEF9;
   /*background: -webkit-linear-gradient(top right,#FFFC00, #5ADEF9, #5ADEF9, #5ADEF9);*/
-  padding: 100px 20px;
+  padding: 100px 0px;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
+  z-index: -1;
 }
 .sky{
   width: 100%;
@@ -41,7 +43,7 @@ body{
 .cloud_oval{
   border-radius: 50%;
   width: 85px;
-  height: 85px;
+  height: inherit;
   background: #D8D8D8;
   border: 1px solid #979797;
   left: 0;
@@ -50,7 +52,7 @@ body{
 }
 .cloud_base{
   /* Rectangle 4: */
-  width: 145px;
+  width: inherit;
   height: 57px;
   background: #D8D8D8;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
@@ -65,7 +67,7 @@ body{
   height: 495px;
   float: left;
   transform: rotate(45deg);
-  bottom: -100px;
+  bottom: -300px;
   border-radius: 15px;
 }
 .mountain--left{
@@ -78,7 +80,7 @@ body{
   margin: 0 auto;
   height: 720px;
   width: 720px;
-  bottom: -170px;
+  bottom: -400px;
   z-index: 2;
   border: none;
   box-shadow: 0 0 15px #333;
@@ -109,4 +111,38 @@ body{
   transform: rotate(90deg);
   top:-45px;
   left:45px;
+}
+@media screen and (max-height:640px) and (max-width:768px) {
+  .mountain--center{
+    width: 300px;
+    height:300px;
+    bottom: -200px;
+  }
+  .mountain--right, .mountain--left{
+    width: 150px;
+    height: 150px;
+    bottom: -100px;
+  }
+  .mountain_cap{
+    transform: scale(0.5);
+    top:-5px;
+    left: -80px;
+  }
+  .mountain--left .mountain_cap, .mountain--right .mountain_cap{
+    top:0px;
+    left:-40px;
+  }
+  .cloud{
+    width: 95px;
+    height: 55px;
+    position: relative;
+    float: right;
+    z-index: 4;
+  }
+  .cloud_oval{
+    width: 55px;
+  }
+  .cloud_base{
+    height: 35px;
+  }
 }
