@@ -1,3 +1,30 @@
+@keyframes spins{
+  from{
+    transform: rotate(0);
+  }to{
+    transform: rotate(360deg);
+  }
+}
+#displayContent{
+  display: none;
+}
+#loader{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border: 1px solid transparent;
+  border-top-color: #B74040;
+  /*border-right-color:
+  border-bottom-color:
+  border-left-color:*/
+  border-radius: 50%;
+  animation: spins 2s infinite;
+}
 .weather_frame * {
   box-sizing: border-box;
 }
@@ -9,12 +36,12 @@
   right:0;
   margin: 0 auto;
   width: 100%;
-  height:280px;
-  background: rgba(255,255,255,0.43);
+  height:320px;
+  background: rgba(255,255,255,0.7);
   box-shadow: 0px 2px 12px 5px rgba(0,0,0,0.16);
   transform: translateY(-50%);
   z-index: 1111;
-  font-family: AvenirNext-Regular;
+  font-family: AvenirNext-Regular, Arial, Helvetica, sans-serif;
   -webkit-backdrop-filter: blur(10px);
 }
 .weather_conditions{
@@ -41,9 +68,9 @@
   font-size: 16px;
 }
 #weatherIcon img{
-  width: 70px;
-  height: 70px;
-  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0px;
 }
 .weather_conditions--little{
 }

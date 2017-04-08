@@ -4,33 +4,38 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>A little bit of anything</title>
-   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="mountains.css">
    <link rel="stylesheet" type="text/css" href="widget.css">
-   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
-   <script src="script.js"></script>
+   <link rel="stylesheet" type="text/css" href="wi/css/weather-icons.css">
+   <link rel="stylesheet" type="text/css" href="wi/css/weather-icons-wind.css">
+   <script src="jquery-3.1.1.js"></script>
  </head>
  <body>
-   <div id="data"></div>
    <div class="weather_frame">
+     <div id="loader"></div>
+     <div id="displayContent">
      <h1 id="location" class="text-center">Harare, Zimbabwe</h1>
      <div class="weather_conditions weather_conditions--temp">
-       <span id="temp">23&deg;C</span>
+       <span id="temp">23</span>
        <br>
-       <span id="tempMax">31&deg;C</span>
-       <span id="tempMin">18&deg;C</span>
+       <span id="tempMax">31</span>
+       <span id="tempMin">18</span>
      </div>
      <div class="weather_conditions weather_conditions--desc">
       <span id="weatherIcon"><img src="Description.png"></span>
-      <span id="weatherDesc">Clouds</span>
+    </br>
+      <span id="weatherMain"></span>
+      <span id="weatherDesc">Cloudrrrr</span>
      </div>
      <div class="weather_conditions weather_conditions--little">
-       Humidity: <span id="humid">Very Humid (20</span>%)
+       <i class="wi wi-fw wi-humidity"></i> Humidity: <span id="humid"></span>%
      </div>
      <div class="weather_conditions">
        Wind: <span id="wind">East 25</span>
      </div>
      <br>
+   </div>
    </div>
    <div class="frame">
      <div class="sky">
@@ -79,5 +84,7 @@
          </div>
       </div>
      </div>
+   </div>
+   <script src="script.js"></script>
  </body>
  </html>
