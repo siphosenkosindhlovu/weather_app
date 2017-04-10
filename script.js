@@ -22,7 +22,7 @@ var $location = $('#location'),
     api = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather\?",
     key = "&appid=979223e5411815d908c275a992b5c234",
     units = "&units=metric",
-    geoip = "http://freegeoip.net/json/?q=";
+    geoip = "https://cors-anywhere.herokuapp.com/http://freegeoip.net/json/?q=";
 if (navigator.geolocation) {
   console.log('data');
   navigator.geolocation.getCurrentPosition(useGeoData,alternateData);
@@ -88,7 +88,7 @@ function update(cityName, temp, maxTemp, minTemp, icon,  main, description, humi
       $temp.html(temp + '<i class="wi wi-celsius"></i>');
       $tempMax.html(maxTemp + '<i class="wi wi-celsius"></i>');
       $tempMin.html(minTemp + '<i class="wi wi-celsius"></i>');
-      $weatherIcon.html("<img src='https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + icon + ".png'>");
+      $weatherIcon.html("<img src='http://openweathermap.org/img/w/" + icon + ".png'>");
       $weatherMain.html(main);
       $weatherDesc.html(description);
       $humid.html(humidity);
