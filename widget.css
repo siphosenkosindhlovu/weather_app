@@ -85,6 +85,14 @@
 #weatherDesc {
   font-size: 14px;
 }
+.page-footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
 @media (min-width: 520px){
   .weather_frame{
     width: 430px;
@@ -125,4 +133,4 @@ color: #30534F;
 font-size: 18px;
 color: #30534F;*/
 
-}
+
