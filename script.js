@@ -53,8 +53,8 @@ function getWeatherData (json){
   var sunriseTime = new Date(json.sys.sunrise * 1000),
       sunsetTime = new Date(json.sys.sunset * 1000),
       temp = Math.round(json.main.temp),
-      maxTemp = Math.round(json.main.temp_max),
-      minTemp = Math.round(json.main.temp_min),
+      //maxTemp = Math.round(json.main.temp_max),
+      //minTemp = Math.round(json.main.temp_min),
       icon = json.weather[0].icon,
       main = json.weather[0].main,
       description = json.weather[0].description,
@@ -81,13 +81,32 @@ function getWeatherData (json){
         return sunsetTime.getHours() + ":" + minutes;
       },
       cityName = json.name + ", " + json.sys.country;
-      update(cityName, temp, maxTemp, minTemp, icon,  main, description, humidity, windDeg, windSpeed, pressure, sunrise, sunset)
+      update(cityName, temp,/* maxTemp, minTemp,*/ icon,  main, description, humidity, windDeg, windSpeed, pressure, sunrise, sunset)
 }
-function update(cityName, temp, maxTemp, minTemp, icon,  main, description, humidity, windDeg, windSpeed, pressure, sunrise, sunset){
+function update(cityName, temp, /* maxTemp, minTemp,*/ icon,  main, description, humidity, windDeg, windSpeed, pressure, sunrise, sunset){
+      var celsiusState = true,
+          currentTemp = temp;
+
       $location.html(cityName);
-      $temp.html(temp + '<i class="wi wi-celsius"></i>');
-      $tempMax.html(maxTemp + '<i class="wi wi-celsius"></i>');
-      $tempMin.html(minTemp + '<i class="wi wi-celsius"></i>');
+      $temp.html(currentTemp + '<i class="wi wi-celsius"></i>');
+      $tempMax.css('font-size', '28px');
+      $tempMax.on('click', function(){
+        if(celsiusState === false){
+          $temp.html(temp + '<i class="wi wi-celsius"></i>');
+          celsiusState = true;
+          $tempMax.css('font-size', '36px');
+          $tempMin.css('font-size', '28px');
+        }
+      });
+      $tempMin.on('click', function(){
+        if(celsiusState){
+          currentTemp = temp * 9/5 + 32;
+          $temp.html(currentTemp + '<i class="wi wi-celsius"></i>');
+          celsiusState = false;
+          $tempMax.css('font-size', '28px');
+          $tempMin.css('font-size', '36px');
+        }
+      });
       $weatherIcon.html("<img src='http://openweathermap.org/img/w/" + icon + ".png'>");
       $weatherMain.html(main);
       $weatherDesc.html(description);
@@ -99,6 +118,3 @@ function update(cityName, temp, maxTemp, minTemp, icon,  main, description, humi
       $displayContent.css('display', 'block');
       $loader.css('display', 'none');
 }
-var alterTemp = Number($temp.html().substring(0,2)),
-    altermaxTemp = Number($tempMax.html().substring(0,2)),
-    alterminTemp = Number($tempMin.html().substring(0,2));
