@@ -64,12 +64,14 @@
 #temp{
   font-size: 50px;
   clear: both;
+  display: block;
 }
-#tempMax{
-  font-size: 24px;
-}
-#tempMin{
-  font-size: 18px;
+#tempMin, #tempMax{
+  font-size: 28px;
+  margin: 0 10px;
+  transition: all 0.2s ease;
+  padding-top: 0px;
+  height: 36px;
 }
 .weather_conditions--desc{
   height: 120px;
