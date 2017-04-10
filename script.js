@@ -19,7 +19,7 @@ var $location = $('#location'),
     tempFahr,
     maxTempFahr,
     minTempFahr,
-    api = "https://api.openweathermap.org/data/2.5/weather\?",
+    api = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather\?",
     key = "&appid=979223e5411815d908c275a992b5c234",
     units = "&units=metric",
     geoip = "http://freegeoip.net/json/?q=";
