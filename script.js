@@ -88,7 +88,7 @@ function update(cityName, temp, maxTemp, minTemp, icon,  main, description, humi
       $temp.html(temp + '<i class="wi wi-celsius"></i>');
       $tempMax.html(maxTemp + '<i class="wi wi-celsius"></i>');
       $tempMin.html(minTemp + '<i class="wi wi-celsius"></i>');
-      $weatherIcon.html("<img src='http://openweathermap.org/img/w/" + icon + ".png'>");
+      $weatherIcon.html("<img src='https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + icon + ".png'>");
       $weatherMain.html(main);
       $weatherDesc.html(description);
       $humid.html(humidity);
