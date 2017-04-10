@@ -4,56 +4,90 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>A little bit of anything</title>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
    <link rel="stylesheet" type="text/css" href="mountains.css">
    <link rel="stylesheet" type="text/css" href="widget.css">
+   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="wi/css/weather-icons.css">
    <link rel="stylesheet" type="text/css" href="wi/css/weather-icons-wind.css">
-   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
-</head>
+   <script src="jquery-3.1.1.js"></script>
+ </head>
  <body>
    <div class="weather_frame">
      <div id="loader"></div>
      <div id="displayContent">
      <h1 id="location" class="text-center">Harare, Zimbabwe</h1>
      <div class="weather_conditions weather_conditions--temp">
-       <span id="temp">23</span>
+       <span id="temp">23<i class="wi wi-celsius"></i></span>
        <br>
-       <span id="tempMax">31</span>
-       <span id="tempMin">18</span>
+       <span id="tempMax">31<i class="wi wi-celsius"></i></span>
+       <span id="tempMin">18<i class="wi wi-celsius"></i></span>
      </div>
      <div class="weather_conditions weather_conditions--desc">
-      <span id="weatherIcon"><img src="Description.png"></span>
-    </br>
-      <span id="weatherMain"></span>
-      <span id="weatherDesc">Cloudrrrr</span>
+      <span id="weatherIcon"><i class="wi wi-day-cloudy"></i></span>
+      <br>
+      <span id="weatherMain">Clouds</span><br>
+      <span id="weatherDesc">Veary Cloudrrrr</span>
      </div>
-     <div class="weather_conditions weather_conditions--little">
-       <i class="wi wi-fw wi-humidity"></i> Humidity: <span id="humid"></span>%
+     <div class="weather_conditions weather_conditions--long">
+       <i class="wi wi-fw wi-barometer"></i> Barometer <span id="barometer"></span>
      </div>
-     <div class="weather_conditions">
-       Wind: <span id="wind">East 25</span>
+     <div class="weather_conditions text-right">
+       <i class="wi wi-fw wi-humidity"></i> Humidity <span id="humid"></span>%
      </div>
+     <div class="weather_conditions text-left">
+       <i class="wi wi-fw wi-small-craft-advisory"></i> Wind <span id="wind"><i class='wi wi-wind towards-45-deg'></i>  25</span>
+     </div>
+     <br>
+     <div class="weather_conditions text-right">
+       <i class="wi wi-fw wi-sunrise"></i>Sunrise <span id="sunrise">17:55</span>
+     </div>
+     <div class="weather_conditions text-left">
+       <i class="wi wi-fw wi-sunset"></i>Sunset <span id="sunset">17:55</span>     </div>
      <br>
    </div>
    </div>
-   <div class="frame">
+   <div class="frame frame--night">
      <div class="sky">
        <div class="sun">
        </div>
+       <div class="cloud_back_layer">
         <div class="cloud">
           <div class="cloud_oval">
           </div>
           <div class="cloud_base">
           </div>
         </div>
+      </div>
+      <div class="cloud_front_layer">
         <div class="cloud">
           <div class="cloud_oval">
           </div>
           <div class="cloud_base">
           </div>
+          <!--div class="rain_drop">
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+            <span class="drop_top"></span>
+          </div-->
         </div>
-     </div>
+      </div>
+    </div>
      <div class="mountain mountain--left">
        <div class="mountain_cap">
          <div class="mountain_ice">
@@ -85,6 +119,9 @@
       </div>
      </div>
    </div>
+   <footer class="page-footer">
+     &copy; Siphosenkosi Ndhlovu for freeCodeCamp
+   </footer>
    <script src="script.js"></script>
  </body>
  </html>
